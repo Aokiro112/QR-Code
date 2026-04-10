@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Compendium — Your Project, One QR Away</title>
+  <meta name="description" content="A QR-code-powered digital page packed with structured information — text, images, videos, and links in one clean place." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAVBAR
+  ══════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <div class="nav-logo-icon">⚡</div>
+        <span class="nav-logo-text">Compendium</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#qr">QR Code</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span class="nav-badge">🟢 Live</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO SECTION
+  ══════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-content container">
+
+      <div class="hero-tag" id="hero-tag">
+        <span class="hero-tag-label">New</span>
+        Digital Compendium · 2025 🎉
+      </div>
+
+      <h1 class="hero-title">
+        Your Project,<br />
+        <span class="accent">One QR Away.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        A premium digital page that lives behind a QR code — packed with all the information, media, and links your audience needs.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#about" class="btn btn-primary" id="hero-explore-btn">🚀 Explore Project</a>
+        <a href="#qr" class="btn btn-outline" id="hero-qr-btn">📱 Get QR Code</a>
+      </div>
+
+      <p class="hero-note">
+        <span>✓</span> No app needed &nbsp;·&nbsp;
+        <span>✓</span> Works on any device &nbsp;·&nbsp;
+        <span>✓</span> Instant QR generator
+      </p>
+
+      <!-- Floating UI Cards -->
+      <div class="hero-floats" id="hero-floats">
+
+        <!-- Sticky Note -->
+        <div class="float-card float-note">
+          <div class="float-note-pin"></div>
+          Scan to keep track of all project details, media, and links in one place.
+        </div>
+
+        <!-- Task / Info Card -->
+        <div class="float-card float-task" id="float-info-card">
+          <div class="float-task-header">Page Sections</div>
+          <div class="float-task-item">
+            <div class="float-check done"></div>
+            <span class="float-task-name done">📝 About & Description</span>
+          </div>
+          <div class="float-task-item">
+            <div class="float-check done"></div>
+            <span class="float-task-name done">🖼️ Media Gallery</span>
+          </div>
+          <div class="float-task-item">
+            <div class="float-check"></div>
+            <span class="float-task-name">🔗 Quick Links</span>
+          </div>
+          <div class="float-task-item">
+            <div class="float-check"></div>
+            <span class="float-task-name">📱 QR Generator</span>
+          </div>
+          <div class="float-bar">
+            <div class="float-bar-fill" style="width:50%"></div>
+          </div>
+        </div>
+
+        <!-- QR card -->
+        <div class="float-card float-timer" id="float-qr-card">
+          <div class="float-timer-label">QR Ready</div>
+          <div class="float-timer-value" style="font-size:2.2rem;">📱</div>
+          <div class="float-timer-sub">
+            <span class="float-timer-dot"></span>
+            Scan to open page
+          </div>
+        </div>
+
+        <!-- Stats Pill -->
+        <div class="float-card float-stats" id="float-stats-card">
+          <div class="float-stat">
+            <div class="float-stat-num">4+</div>
+            <div class="float-stat-name">Sections</div>
+          </div>
+          <div class="float-divider"></div>
+          <div class="float-stat">
+            <div class="float-stat-num">∞</div>
+            <div class="float-stat-name">Scans</div>
+          </div>
+          <div class="float-divider"></div>
+          <div class="float-stat">
+            <div class="float-stat-num">100%</div>
+            <div class="float-stat-name">Digital</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       STATS STRIP
+  ══════════════════════════════ -->
+  <div class="logos-section">
+    <div class="container">
+      <div class="stats-grid-strip">
+        <div class="stat-strip-item fade-up">
+          <div class="stat-strip-num">2025</div>
+          <div class="stat-strip-label">Year</div>
+        </div>
+        <div class="stat-strip-item fade-up">
+          <div class="stat-strip-num">4+</div>
+          <div class="stat-strip-label">Sections</div>
+        </div>
+        <div class="stat-strip-item fade-up">
+          <div class="stat-strip-num">∞</div>
+          <div class="stat-strip-label">QR Scans</div>
+        </div>
+        <div class="stat-strip-item fade-up">
+          <div class="stat-strip-num">100%</div>
+          <div class="stat-strip-label">Digital</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════ -->
+  <section id="about" class="features-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <div class="section-badge">✦ About</div>
+        <h2 class="section-title">What is this project?</h2>
+        <p class="section-desc">
+          This is a <strong>Digital Compendium</strong> — a fully interactive web page that replaces traditional paper brochures. Scan once, get everything: description, images, videos, and direct links. Perfect for events, college projects, portfolios, and smart menus.
+        </p>
+      </div>
+
+      <div class="features-grid" style="margin-top: 48px;">
+        <div class="feature-card fade-up" id="feat-text">
+          <div class="feature-icon fi-blue">📝</div>
+          <h3 class="feature-title">Rich Text Content</h3>
+          <p class="feature-desc">Structured sections with clean typography and organized information flow for your audience.</p>
+        </div>
+        <div class="feature-card fade-up" id="feat-media">
+          <div class="feature-icon fi-purple">🖼️</div>
+          <h3 class="feature-title">Media Gallery</h3>
+          <p class="feature-desc">High-quality images and embedded YouTube videos to visually showcase your project or event.</p>
+        </div>
+        <div class="feature-card fade-up" id="feat-links">
+          <div class="feature-icon fi-green">🔗</div>
+          <h3 class="feature-title">Smart Links</h3>
+          <p class="feature-desc">Direct access to GitHub, websites, forms, and social profiles — all in one clean place.</p>
+        </div>
+        <div class="feature-card fade-up" id="feat-qr">
+          <div class="feature-icon fi-yellow">📱</div>
+          <h3 class="feature-title">QR Code Generator</h3>
+          <p class="feature-desc">Generate a QR code for any URL instantly. Download as PNG and print on any material.</p>
+        </div>
+        <div class="feature-card fade-up" id="feat-device">
+          <div class="feature-icon fi-red">📲</div>
+          <h3 class="feature-title">Works on Any Device</h3>
+          <p class="feature-desc">Fully responsive design — looks perfect on phones, tablets, and desktops without any app.</p>
+        </div>
+        <div class="feature-card fade-up" id="feat-free">
+          <div class="feature-icon fi-dark">🆓</div>
+          <h3 class="feature-title">100% Free to Host</h3>
+          <p class="feature-desc">Deploy on Netlify or Vercel for free. Get a real URL, generate QR, and share instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       MEDIA SECTION
+  ══════════════════════════════ -->
+  <section id="media" class="preview-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <div class="section-badge">✦ Media</div>
+        <h2 class="section-title">Gallery &amp; Videos</h2>
+        <p class="section-desc">Visual content that brings your project to life — from concept shots to a full walkthrough video.</p>
+      </div>
+
+      <!-- Image Grid -->
+      <div class="media-img-grid fade-up" style="margin-top: 40px;">
+        <div class="media-img-card" id="media-card-1">
+          <img src="images/project_card1.png" alt="Technology Stack" />
+          <div class="media-img-overlay">
+            <div class="media-img-label">Gallery · 01</div>
+            <div class="media-img-title">Technology Stack</div>
+          </div>
+        </div>
+        <div class="media-img-card" id="media-card-2">
+          <img src="images/project_card2.png" alt="Dashboard Preview" />
+          <div class="media-img-overlay">
+            <div class="media-img-label">Gallery · 02</div>
+            <div class="media-img-title">Dashboard Preview</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Video -->
+      <div class="video-wrap fade-up" id="video-section">
+        <div class="video-browser-bar">
+          <span class="vb-dot" style="background:#EF4444"></span>
+          <span class="vb-dot" style="background:#F59E0B"></span>
+          <span class="vb-dot" style="background:#10B981"></span>
+          <span class="vb-url">Project Demo — Full Walkthrough Video</span>
+        </div>
+        <iframe
+          id="project-video"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Project Demo Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       LINKS SECTION
+  ══════════════════════════════ -->
+  <section id="links" class="features-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <div class="section-badge">✦ Links</div>
+        <h2 class="section-title">Quick Access</h2>
+        <p class="section-desc">All the important links in one place — no digging required.</p>
+      </div>
+
+      <div class="links-grid fade-up" style="margin-top: 44px;">
+        <a href="https://github.com" target="_blank" rel="noopener" class="link-card" id="link-github">
+          <div class="link-card-icon">🐙</div>
+          <div class="link-card-title">GitHub Repo</div>
+          <div class="link-card-desc">View source code &amp; contribute</div>
+        </a>
+        <a href="https://example.com" target="_blank" rel="noopener" class="link-card" id="link-website">
+          <div class="link-card-icon">🌐</div>
+          <div class="link-card-title">Live Website</div>
+          <div class="link-card-desc">See the project in action</div>
+        </a>
+        <a href="mailto:hello@example.com" class="link-card" id="link-contact">
+          <div class="link-card-icon">✉️</div>
+          <div class="link-card-title">Contact</div>
+          <div class="link-card-desc">Reach out directly via email</div>
+        </a>
+        <a href="https://docs.example.com" target="_blank" rel="noopener" class="link-card" id="link-docs">
+          <div class="link-card-icon">📄</div>
+          <div class="link-card-title">Documentation</div>
+          <div class="link-card-desc">Full project documentation</div>
+        </a>
+        <a href="https://demo.example.com" target="_blank" rel="noopener" class="link-card" id="link-demo">
+          <div class="link-card-icon">🎬</div>
+          <div class="link-card-title">Live Demo</div>
+          <div class="link-card-desc">Try a live interactive demo</div>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="link-card" id="link-social">
+          <div class="link-card-icon">📸</div>
+          <div class="link-card-title">Instagram</div>
+          <div class="link-card-desc">Follow project updates</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       QR CODE GENERATOR SECTION
+  ══════════════════════════════ -->
+  <section id="qr" class="qr-section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <div class="section-badge">✦ QR Generator</div>
+        <h2 class="section-title">Generate Your QR Code</h2>
+        <p class="section-desc">
+          Enter any URL below to instantly generate a QR code. Download it and add it to your posters, brochures, or visiting cards.
+        </p>
+      </div>
+
+      <!-- URL Input -->
+      <div class="qr-input-wrap fade-up">
+        <input
+          type="url"
+          id="qr-url-input"
+          class="qr-input"
+          placeholder="https://your-project-url.com"
+          value="https://your-project-url.com"
+        />
+        <button class="btn btn-primary" id="qr-generate-btn" onclick="generateQR()">
+          ⚡ Generate
+        </button>
+      </div>
+
+      <!-- QR Display -->
+      <div class="qr-box-wrap fade-up">
+        <div class="qr-box" id="qr-box">
+          <div id="qr-canvas"></div>
+          <p class="qr-desc">📱 Scan this QR to open the page</p>
+          <div class="qr-actions">
+            <button class="btn btn-outline" id="qr-download-btn" onclick="downloadQR()">
+              ⬇️ Download PNG
+            </button>
+            <button class="btn btn-primary" id="qr-copy-btn" onclick="copyURL()">
+              📋 Copy URL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <div class="footer-logo-icon">⚡</div>
+            <span class="footer-logo-name">Digital Compendium</span>
+          </div>
+          <p class="footer-tagline">Scan. Read. Connect.</p>
+        </div>
+        <div class="footer-nav">
+          <div>
+            <p class="footer-col-title">Navigate</p>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#media">Media</a></li>
+              <li><a href="#links">Links</a></li>
+              <li><a href="#qr">QR Code</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-col-title">Use Cases</p>
+            <ul class="footer-links">
+              <li><a href="#">College Projects</a></li>
+              <li><a href="#">Event Brochures</a></li>
+              <li><a href="#">Portfolios</a></li>
+              <li><a href="#">Smart Menus</a></li>
+              <li><a href="#">Product Pages</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Digital Compendium. Made with ♥ by <strong>Mayank</strong>.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="GitHub">⌥</a>
+          <a href="#" class="social-btn" aria-label="Instagram">◉</a>
+          <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════
+       SCRIPTS
+  ══════════════════════════════ -->
+  <script>
+    /* ── Scroll Animations ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    /* ── Navbar scroll effect ── */
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.style.boxShadow = window.scrollY > 60 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none';
+    });
+
+    /* ── QR Code Generator ── */
+    let qrInstance = null;
+
+    function generateQR() {
+      const url = document.getElementById('qr-url-input').value.trim();
+      if (!url) return;
+      const canvas = document.getElementById('qr-canvas');
+      canvas.innerHTML = '';
+      qrInstance = new QRCode(canvas, {
+        text: url,
+        width: 220,
+        height: 220,
+        colorDark: '#2563EB',
+        colorLight: '#FFFFFF',
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    }
+
+    function downloadQR() {
+      const img = document.querySelector('#qr-canvas img');
+      if (!img) { alert('Please generate a QR code first!'); return; }
+      const link = document.createElement('a');
+      link.href = img.src;
+      link.download = 'qr-code.png';
+      link.click();
+    }
+
+    function copyURL() {
+      const url = document.getElementById('qr-url-input').value.trim();
+      if (!url) return;
+      navigator.clipboard.writeText(url).then(() => {
+        const btn = document.getElementById('qr-copy-btn');
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => btn.textContent = '📋 Copy URL', 2000);
+      });
+    }
+
+    /* ── Auto-generate QR on load ── */
+    window.addEventListener('load', () => generateQR());
+
+    /* ── Enter key triggers generate ── */
+    document.getElementById('qr-url-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') generateQR();
+    });
+  </script>
+</body>
+</html>
